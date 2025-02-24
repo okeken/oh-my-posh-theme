@@ -1,0 +1,105 @@
+{
+    "$schema": "https://raw.githubusercontent.com/okeken/oh-my-posh-theme/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "foreground": "#F1FA8C",
+            "properties": {
+              "style": "folder"
+            },
+            "style": "diamond",
+            "template": "<#42E66C>\ueaf7 </><b>{{ .Path }}</b>",
+            "type": "path"
+          },
+          {
+            "foreground": "#43CCEA",
+            "properties": {
+              "branch_icon": ""
+            },
+            "style": "diamond",
+            "template": "<#ffffff> \u26A1 </><b>{{ .HEAD }}</b>",
+            "type": "git"
+          },
+          {
+            "foreground": "#ff0000",
+            "style": "diamond",
+            "template": "<#ff0000> \u25C9</>",
+            "type": "text"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#FFFFFF",
+            "style": "plain",
+            "template": ">",
+            "type": "text"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "right",
+        "segments": [
+          {
+            "foreground": "red",
+            "style": "plain",
+            "template": "| root ",
+            "type": "root"
+          },
+          {
+            "foreground": "#06A4CE",
+            "style": "powerline",
+            "template": "| \ue798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+            "type": "dart"
+          },
+          {
+            "foreground": "#6CA35E",
+            "style": "powerline",
+            "template": "| \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+            "type": "node"
+          },
+          {
+            "foreground": "#4584b6",
+            "properties": {
+              "display_mode": "context",
+              "fetch_virtual_env": true
+            },
+            "style": "plain",
+            "template": "| \ue235 {{ .Venv }} ",
+            "type": "python"
+          },
+          {
+            "foreground_templates": [
+              "{{if eq \"Charging\" .State.String}}#4caf50{{end}}",
+              "{{if eq \"Discharging\" .State.String}}#40c4ff{{end}}",
+              "{{if eq \"Full\" .State.String}}#ff0000{{end}}"
+            ],
+            "invert_powerline": true,
+            "properties": {
+              "charged_icon": "\uf00d ",
+              "charging_icon": "\ue234 "
+            },
+            "style": "powerline",
+            "template": "| {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} \uf295 ",
+            "type": "battery"
+          },
+          {
+            "foreground": "lightGreen",
+            "style": "plain",
+            "template": "| {{ .CurrentDate | date .Format }} ",
+            "type": "time"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "final_space": true,
+    "version": 3
+  }
