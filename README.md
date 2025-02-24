@@ -81,3 +81,7 @@ Here’s how the prompt might look with this configuration:
 This configuration is provided under the MIT License. Feel free to use, modify, and distribute it as needed.
 
 Enjoy your enhanced terminal experience! 🚀
+
+## Heaviy Inspired by
+ - https://github.dev/JanDeDobbeleer/oh-my-posh/blob/main/themes/negligible.omp.json
+ - https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/json.omp.json
